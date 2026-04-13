@@ -86,7 +86,7 @@ public class DataTypeExercisesTest {
     @Test
     public void testDeclareBoolean() {
         boolean value = exercises.declareBoolean();
-        assertTrue("Should return a boolean", value instanceof Boolean);
+        assertTrue("Should return a boolean", ((Object) value) instanceof Boolean);
     }
 
     @Test

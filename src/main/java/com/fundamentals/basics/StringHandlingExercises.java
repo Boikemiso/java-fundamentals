@@ -39,9 +39,10 @@ public class StringHandlingExercises {
      * @param text The input string
      * @return The number of characters in the string
      */
+    //This method is used for finding how many characters are in a string
     public int getStringLength(String text) {
         // TODO: Implement this method
-        return 0;
+        return text.length();
     }
 
     /**
@@ -57,9 +58,10 @@ public class StringHandlingExercises {
      * @param index The position (0-based)
      * @return The character at that position
      */
+    //This method is used to get a character at a specific index of a string
     public char getCharacterAtIndex(String text, int index) {
         // TODO: Implement this method
-        return ' ';
+        return text.charAt(index);
     }
 
     /**
@@ -76,9 +78,11 @@ public class StringHandlingExercises {
      * @param end The ending index (exclusive)
      * @return The substring
      */
+    //To get a substring we use this method in which we specify the index where it starts
+    //but up to and not including the end index
     public String getSubstring(String text, int start, int end) {
         // TODO: Implement this method
-        return "";
+        return text.substring(start, end);
     }
 
     /**
@@ -91,9 +95,10 @@ public class StringHandlingExercises {
      * @param text The input string
      * @return The string in uppercase
      */
+    //This method simply converts all characters to upper case
     public String convertToUppercase(String text) {
         // TODO: Implement this method
-        return "";
+        return text.toUpperCase();
     }
 
     /**
@@ -106,9 +111,10 @@ public class StringHandlingExercises {
      * @param text The input string
      * @return The string in lowercase
      */
+    //This method simply converts all characters to lower case
     public String convertToLowercase(String text) {
         // TODO: Implement this method
-        return "";
+        return text.toLowerCase();
     }
 
     /**
@@ -124,9 +130,12 @@ public class StringHandlingExercises {
      * @param text2 Second string
      * @return true if equal, false otherwise
      */
+    //This method check if two strings are equal to each other and includes checking
+    //the use of case of the two strings
+    //We use boolean to return if it's true or false
     public boolean areStringsEqual(String text1, String text2) {
         // TODO: Implement this method. Use .equals(), not ==
-        return false;
+        return text1.equals(text2);
     }
 
     /**
@@ -141,9 +150,12 @@ public class StringHandlingExercises {
      * @param text2 Second string
      * @return true if equal (case-insensitive)
      */
+    //This method check if two strings are equal to each other and ignores
+    //case use between the two
+    //We use boolean to return if it's true or false
     public boolean areStringsEqualIgnoreCase(String text1, String text2) {
         // TODO: Implement this method
-        return false;
+        return text1.equalsIgnoreCase(text2);
     }
 
     /**
@@ -158,9 +170,10 @@ public class StringHandlingExercises {
      * @param substring The substring to search for
      * @return true if substring is found
      */
+    //This method checks if a string contain a specific substring
     public boolean stringContains(String text, String substring) {
         // TODO: Implement this method
-        return false;
+        return text.contains(substring);
     }
 
     /**
@@ -176,9 +189,11 @@ public class StringHandlingExercises {
      * @param character The character to find
      * @return The index of the character, or -1 if not found
      */
+    //This method checks the position of a character from a string
+    //If there multiple of the same character it checks the first one
     public int findCharacterIndex(String text, char character) {
         // TODO: Implement this method
-        return -1;
+        return text.indexOf(character);
     }
 
     /**
@@ -194,8 +209,50 @@ public class StringHandlingExercises {
      * @param newChar The replacement character
      * @return The modified string
      */
+    //This method replaces all instances of a character with the newly specified one
     public String replaceCharacter(String text, char oldChar, char newChar) {
         // TODO: Implement this method
-        return "";
+        return text.replace(oldChar, newChar);
+    }
+
+    public static void main(String[] Args){
+        String text = new String("value1");
+
+        String text2 = new String("Value2");
+
+        String text4 = new String("value1");
+
+        String text3 = text;
+
+        String value = "Hello";
+
+        String value2 = value;
+        System.out.println(value2 == value);//true
+        System.out.println(value2.equals(value));//true
+        value2 = "Hexxo";
+
+        System.out.println(value2 == value);//false
+
+        System.out.println(value2.equals(value));//false
+
+        //Conditional statement
+        //return true or false
+        //== object equality
+        //.equals string eqaulity
+        System.out.println(text == text2);//false
+
+        System.out.println(text == text3);//true
+
+        System.out.println(text.equals(text2));//false
+
+        System.out.println(text.equals(text4));//true
+
+        System.out.println(text == text4 );//true
+
+        System.out.println( value.indexOf("l"));
+
+        System.out.println( value.indexOf("b"));
+
+
     }
 }

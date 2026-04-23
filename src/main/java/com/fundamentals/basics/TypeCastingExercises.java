@@ -17,7 +17,13 @@ package com.fundamentals.basics;
  * 
  * YOUR TASK: Complete each method by implementing type casting as described.
  */
-
+//implicit
+//int x = 56;
+//long b = x;
+//
+////explicit
+//long r = 577l;
+//(int) r
 public class TypeCastingExercises {
 
     /**
@@ -31,9 +37,13 @@ public class TypeCastingExercises {
      * @param value An integer value
      * @return The same value as a long
      */
+
     public long implicitCastIntToLong(int value) {
         // TODO: Implement this method
-        return 0L;
+        //Just realized the method return type converts for me
+        //long x = value;
+        //return x;
+        return value;
     }
 
     /**
@@ -49,7 +59,7 @@ public class TypeCastingExercises {
      */
     public double implicitCastIntToDouble(int value) {
         // TODO: Implement this method
-        return 0.0;
+        return value;
     }
 
     /**
@@ -68,7 +78,7 @@ public class TypeCastingExercises {
      */
     public int explicitCastDoubleToInt(double value) {
         // TODO: Implement this method
-        return 0;
+        return (int) value;
     }
 
     /**
@@ -85,7 +95,7 @@ public class TypeCastingExercises {
      */
     public int explicitCastLongToInt(long value) {
         // TODO: Implement this method
-        return 0;
+        return (int) value;
     }
 
     /**
@@ -101,7 +111,7 @@ public class TypeCastingExercises {
      */
     public float explicitCastDoubleToFloat(double value) {
         // TODO: Implement this method
-        return 0f;
+        return (float) value;
     }
 
     /**
@@ -122,7 +132,7 @@ public class TypeCastingExercises {
      */
     public double divideWithDecimalResult(int numerator, int denominator) {
         // TODO: Implement this method. Cast to get a decimal result!
-        return 0.0;
+        return (double) numerator/denominator;
     }
 
     /**
@@ -138,7 +148,7 @@ public class TypeCastingExercises {
      */
     public int castCharToInt(char character) {
         // TODO: Implement this method
-        return 0;
+        return  character;
     }
 
     /**
@@ -154,7 +164,7 @@ public class TypeCastingExercises {
      */
     public char castIntToChar(int asciiCode) {
         // TODO: Implement this method
-        return ' ';
+        return (char) asciiCode;
     }
 
     /**
@@ -171,11 +181,20 @@ public class TypeCastingExercises {
      * @param total The total possible points
      * @return The percentage as a double
      */
+    //Promotion
     public double calculatePercentage(int points, int total) {
         // TODO: Implement this method
-        return 0.0;
+        return  points * 1.0/total * 100;
     }
 
+//    public short byteAgainstShort(Byte point, Short total){
+//        return  point + total;
+//    }
+
+    //Promotion
+    public int intAgainstLong(short point, byte total){
+        return point + total;
+    };
     /**
      * Exercise 10: Demonstrating integer overflow with explicit cast
      * 
@@ -190,6 +209,48 @@ public class TypeCastingExercises {
      */
     public int demonstrateOverflow() {
         // TODO: Implement this method. Cast Long.MAX_VALUE to int
-        return 0;
+        return ((int) Long.MAX_VALUE);
+    }
+
+    public static void main(String[] Args){
+        int x = 54;
+        long b = x;
+
+        //primitives
+        //Produce a compilation success such that only the
+        //defined variable line is manipulated and the print
+        // left the same(ie with it's .getClass() method applied)
+        //Second would be to now manipulate the print section so
+        // that it compiles whilst the declared variable is left to type int
+
+
+          Integer value = 4;
+          System.out.println(value.getClass());
+
+
+          int value1 = 4;
+          System.out.println(((Integer) value1).getClass());
+
+//        create a variables of all types and perform simple addition
+//        on all types interchangeably(ie mix and match) IN THE PRINT STATEMENT:
+//        ie
+//        numOne = 1;
+//        numTwo = 2.1;
+//        sys.print(numOne + numTwo)
+//        then silently list their types
+//        along side each print statement(before printing ofcourse,
+//        showing that you are actively learning through prediction)
+
+       int numOne = 1;
+       double numTwo = 2.1;
+       float numThree = 4f;
+       byte numFour = 9;
+
+        //double
+        System.out.println(numOne + numTwo);
+
+        System.out.println(numThree);
+
+
     }
 }

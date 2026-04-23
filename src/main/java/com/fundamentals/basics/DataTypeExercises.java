@@ -1,5 +1,7 @@
 package com.fundamentals.basics;
 
+import java.util.Scanner;
+
 /**
  * DATA TYPES EXERCISES
  *
@@ -255,18 +257,28 @@ public class DataTypeExercises {
     //Static fields do not have access instant members
     //Instance members static fields
     public static void main(String[] Args){
-        //Can't access instance type from static
-        DataTypeExercises data = new DataTypeExercises();
+        //byte x = 128;
+        short y = 32767;
 
 
-//        //System.out.println(((Object) data.db).getClass());
+        short ghf = (byte)89;
+
+        byte cks = (short)45;
+
+
+        int jf = (int)10L;
+
+        //Compile time error happens before it executes
+        //Run time error While the program is running
+
+//        Scanner scanner = new Scanner(System.in);
 //
-//        System.out.println(((Object) data.ch).getClass());
-
-
-        //Different for loop
-        for(Object i: data.declareAllPrimitiveTypes){
-            System.out.println(i.getClass());
-        }
+//        String input = scanner.nextLine();
+//
+//       // System.out.println(input)
+//
+//
+//
+//        System.out.println();
     }
 }
